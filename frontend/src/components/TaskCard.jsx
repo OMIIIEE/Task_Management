@@ -68,21 +68,21 @@ const TaskCard = ({ task, onDelete, onUpdate }) => {
             <div className="flex justify-between">
               <div className="flex items-center">
                 <button
-                  className="hover:bg-blue-600 hover:text-white text-white px-3 py-1 rounded-sm ml-2 focus:outline-none text-purple-500 text-lg"
+                  className="hover:bg-blue-600 hover:text-white  px-3 py-1 rounded-sm ml-2 focus:outline-none text-purple-500 text-lg"
                   onClick={toggleEdit}
                   title="Edit Task"
                 >
                   <MdEdit className="me-1" />
                 </button>
                 <button
-                  className="hover:bg-red-600 hover:text-white text-white px-3 py-1 rounded-sm ml-2 focus:outline-none text-red-500 text-lg"
+                  className="hover:bg-red-600 hover:text-white  px-3 py-1 rounded-sm ml-2 focus:outline-none text-red-500 text-lg"
                   onClick={handleDelete}
                   title="Delete Task"
                 >
                   <MdDelete className="me-1" />
                 </button>
                 <button
-                  className="hover:bg-green-600 hover:text-white text-white px-3 py-1 rounded-sm ml-2 focus:outline-none text-green-500 text-lg"
+                  className="hover:bg-green-600 hover:text-white px-3 py-1 rounded-sm ml-2 focus:outline-none text-green-500 text-lg"
                   onClick={openModal}
                   title="View Task"
                 >
