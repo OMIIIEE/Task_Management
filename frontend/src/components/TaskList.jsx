@@ -16,11 +16,12 @@ const TaskList = () => {
     fetchTasks();
   }, []);
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
 
   const fetchTasks = async () => {
     try {
       const response = await axios.get('http://localhost:5000/api/tasks');
+      
       // const response = await axios.get('https://task-management-five-mu.vercel.app/api/tasks');
       //  https://task-management-five-mu.vercel.app/
       const tasksData = response.data;

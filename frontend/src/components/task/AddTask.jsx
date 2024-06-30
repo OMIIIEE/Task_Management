@@ -11,7 +11,7 @@ const AddTask = ({ onAdd, closeModal }) => {
   const [status, setStatus] = useState('pending');
 
   
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
