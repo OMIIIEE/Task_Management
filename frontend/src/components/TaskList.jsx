@@ -16,9 +16,13 @@ const TaskList = () => {
     fetchTasks();
   }, []);
 
+  axios.defaults.withCredentials = true;
+
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks');
+      // const response = await axios.get('http://localhost:5000/api/tasks');
+      const response = await axios.get('https://task-management-five-mu.vercel.app/api/tasks');
+      //  https://task-management-five-mu.vercel.app/
       const tasksData = response.data;
       const uniquePriorities = ['All', ...new Set(tasksData.map(task => task.priority))];
       setTasks(tasksData);
@@ -43,7 +47,9 @@ const TaskList = () => {
 
   const deleteTask = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+      // await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+      await axios.delete(`https://task-management-five-mu.vercel.app/api/tasks/${taskId}`);
+
       fetchTasks(); // Refresh tasks after deletion
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -52,7 +58,9 @@ const TaskList = () => {
 
   const updateTask = async (taskId, updatedTaskData) => {
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`, updatedTaskData);
+      // await axios.put(`http://localhost:5000/api/tasks/${taskId}`, updatedTaskData);
+      await axios.put(`https://task-management-five-mu.vercel.app/api/tasks/${taskId}`, updatedTaskData);
+
       fetchTasks(); // Refresh tasks after update
     } catch (error) {
       console.error('Error updating task:', error);

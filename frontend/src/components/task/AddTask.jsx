@@ -10,11 +10,15 @@ const AddTask = ({ onAdd, closeModal }) => {
   const [priority, setPriority] = useState('medium');
   const [status, setStatus] = useState('pending');
 
+  
+axios.defaults.withCredentials = true;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const newTask = { title, description, dueDate, priority, status };
-      await axios.post('http://localhost:5000/api/tasks', newTask);
+      // await axios.post('http://localhost:5000/api/tasks', newTask);
+      await axios.post('https://task-management-five-mu.vercel.app/api/tasks', newTask);
       onAdd(newTask);
       setTitle('');
       setDescription('');
