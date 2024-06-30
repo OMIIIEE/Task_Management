@@ -11,15 +11,15 @@ const app = express();
 
 // task-management-five-mu.vercel.app
 
-app.use(cors(
-  {
-  origin: ["https://task-management-frontend-orpin.vercel.app"],
-  methods:
-  ["POST", "GET"],
-  credentials: true
-  }
-  ));
-// app.use(cors());
+// app.use(cors(
+//   {
+//   origin: ["https://task-management-frontend-orpin.vercel.app"],
+//   methods:
+//   ["POST", "GET"],
+//   credentials: true
+//   }
+//   ));
+app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
