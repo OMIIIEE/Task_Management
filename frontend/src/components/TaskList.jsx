@@ -7,7 +7,7 @@ const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true); // State for loading indicator
   const [currentPage, setCurrentPage] = useState(1); // State for current page
-  const [tasksPerPage] = useState(6); // Tasks per page
+  const [tasksPerPage] = useState(6); //State for Tasks per page
 
   const [priorities, setPriorities] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);

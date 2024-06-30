@@ -1,16 +1,15 @@
-// index.js or app.js
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config(); // Load environment variables from .env
+require('dotenv').config(); 
 
-// Import routes
 const tasksRouter = require('./routes/tasks');
 
-// Create Express app
+
 const app = express();
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
@@ -27,7 +26,7 @@ db.once('open', () => {
   console.log('Connected to MongoDB database');
 });
 
-// Routes
+
 app.use('/api/tasks', tasksRouter);
 
 // Start server

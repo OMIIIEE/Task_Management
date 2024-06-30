@@ -10,7 +10,7 @@ const Pagination = ({ totalPages, currentPage, paginate, prevPage, nextPage }) =
   return (
     <nav className="flex justify-center my-4">
       <ul className="inline-flex items-center -space-x-px gap-2">
-        {/* Previous Button */}
+      
         <li className="page-item">
           <button
             onClick={() => prevPage()}
@@ -23,7 +23,7 @@ const Pagination = ({ totalPages, currentPage, paginate, prevPage, nextPage }) =
           </button>
         </li>
 
-        {/* Page Numbers */}
+        
         {pageNumbers.map((number) => (
           <li key={number} className="page-item">
             <button
@@ -39,7 +39,7 @@ const Pagination = ({ totalPages, currentPage, paginate, prevPage, nextPage }) =
           </li>
         ))}
 
-        {/* Next Button */}
+       
         <li className="page-item">
           <button
             onClick={() => nextPage()}
