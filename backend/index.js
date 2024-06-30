@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors(
   {
-  origin: ["https://task-management-frontend-orpin.vercel.app/"],
+  origin: ["https://task-management-frontend-orpin.vercel.app"],
   methods:
   ["POST", "GET"],
   credentials: true
